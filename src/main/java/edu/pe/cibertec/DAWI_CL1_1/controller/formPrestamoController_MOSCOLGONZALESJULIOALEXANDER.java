@@ -14,7 +14,7 @@ public class formPrestamoController_MOSCOLGONZALESJULIOALEXANDER {
     public String index(Model model){
         model.addAttribute("prestamoModel", new prestamoModel_MOSCOLGONZALESJULIOALEXANDER());
         model.addAttribute("verResultado", false);
-        return "formPrestamo";
+        return "formPrestamo_MOSCOLGONZALESJULIOALEXANDER";
     }
 
     @PostMapping("/CalcularCuotas")
@@ -50,6 +50,6 @@ public class formPrestamoController_MOSCOLGONZALESJULIOALEXANDER {
         model.addAttribute("resultado4","El monto de cada cuota es: " + String.format("%.2f", montocuota));
         model.addAttribute("verResultado", true);
         model.addAttribute("prestamoModel", new prestamoModel_MOSCOLGONZALESJULIOALEXANDER());
-        return "formPrestamo";
+        return "formPrestamo_MOSCOLGONZALESJULIOALEXANDER";
     }
 }
