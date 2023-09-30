@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/style/bootstrap/bootstrap.css}"
+          rel="stylesheet">
+    <script th:src="@{/script/bootstrap/bootstrap.bundle.js}"
+            type="text/javascript"></script>
+</head>
+<body>
+<div class="card text-center">
+    <div class="card-header">
+        Imprimir numeros Ingresados
+    </div>
+    <div class="card-body">
+        <form th:action="@{/index}" method="post" th:object="${frm}">
+            <div class="mb-3">
+                <label for="nota1" class="form-label">Numeros Naturales</label>
+                <input type="number" class="form-control" th:field="*{numero}" id="nota1" aria-describedby="emailHelp">
+
+            </div>
+            <button type="submit" class="btn btn-primary">Imprimir</button>
+            <div>
+                <span th:text="${verResConsecu}?: ''"></span>
+                <br>
+                <br>
+                <span th:text="${verResCubos}?: ''"></span>
+                <br>
+                <br>
+                <span th:text="${verResCuartas}?: ''"></span>
+            </div>
+        </form>
+    </div>
+
+
+    </div>
+</body>
+</html>
